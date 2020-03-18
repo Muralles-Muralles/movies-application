@@ -60,10 +60,12 @@ $(document).ready(function () {
                         console.log("not a movie")
                     }
                 });
+                $('#insertMovies').html("");
+                movieUpdate()
 
                 $('#input-movie').val(''); //clears search box
 
-            })// after item is deleted this will update the hmtl with current movies
+            })// after item is deleted this will update the html with current movies
         });
     }
 
@@ -74,6 +76,7 @@ $(document).ready(function () {
 
 //will add a new movie to the jb.son file and log the new movies array. Will later have it added to a library appended to the body.
     $('#add-movie').click(function () {//on click will add the new movie to the json file
+
         addMovie({
             "title": $('#input-movie').val(),
             "rating": $('#input-rating').val()
@@ -99,14 +102,10 @@ $(document).ready(function () {
     //
 
         $('#edit-movie').click(function () {
-
-
             //     movies.forEach(({title, rating, id}) => {
             $('#movies > tbody').each(function (element) {
-
                 // var name = $('th').text();
                 //     $('tr > td.title').val();
-
                 $(this).children('tr').each(function () {
                     $(this).children('td').each(function () {
                         let title = $(this).html();
@@ -139,7 +138,6 @@ $(document).ready(function () {
                     console.log($('.movie-edit').val());
                     console.log($('.rating-edit').val());
                 });
-
             });
         });
             // $('#save-edit').click(function () {//on click will add the new movie to the json file
