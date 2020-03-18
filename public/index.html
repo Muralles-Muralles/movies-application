@@ -6,23 +6,26 @@
     <link rel="stylesheet" href="/style.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
-
-           <nav class="sticky-top">
-            <input id="input-movie" type="text" placeholder="Add/Remove movie">
-            <input id="input-rating" type="text" placeholder="enter rating">
-            <button id="add-movie">Add</button>
-            <button id="delete-movie">Remove</button>
-            <button id="edit-movie">Edit</button>
-            <button id="save-edit">Save</button>
+        <h1 class="text-center m-3 tracking-in-contract-bck">Movies Application</h1>
+<!--    <div class="navcontainer slide-in-left">-->
+           <nav class="sticky-top text-center m-auto align-center text-center">
+            <input class="rounded border border-light" id="input-movie" type="text" placeholder="Add/Remove movie">
+            <input class="rounded border border-light" id="input-rating" type="text" placeholder="enter rating">
+            <button type="button" class="btn btn-dark" id="add-movie">Add</button>
+            <button type="button" class="btn btn-dark" id="delete-movie">Remove</button>
+            <button type="button" class="btn btn-dark" id="edit-movie">Edit</button>
+            <button type="button" class="btn btn-dark" id="save-edit">Save</button>
            </nav>
+<!--    </div>-->
 <div class="container d-flex justify-content-center align-items-center ">
     <!--    <h1>Hello There!</h1>-->
     <!--    <p>To get started, edit <code>src/index.js</code>.</p>-->
 
     <!--List movies go here-->
-    <div class="movieList card bg-light " style="height: 400px; width:100%" id="movieList">
+    <div class="movieList card bg-light scale-in-hor-center" style="height: 400px; width:100%" id="movieList">
         <div class="card-body card text-white bg-dark ">
             <table id="movies" class="table table-hover table-borderless ">
                 <thead>
